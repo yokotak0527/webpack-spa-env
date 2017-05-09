@@ -1,0 +1,36 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dev/index.js",
+  "scripts": {
+    "server": "browser-sync start --config config/browser-sync.js",
+    "watch": "cross-env NODE_ENV=development webpack --config config/webpack.dev.js",
+    "dev": "npm run watch & npm run server",
+    "ship": "webpack --config config/webpack.ship.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.4.0",
+    "browser-sync": "^2.18.8",
+    "connect-modrewrite": "^0.10.1",
+    "cross-env": "^4.0.0",
+    "css-loader": "^0.28.1",
+    "file-loader": "^0.11.1",
+    "html-loader": "^0.4.5",
+    "image-size": "^0.5.2",
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.17.0",
+    "url-loader": "^0.5.8",
+    "vue": "^2.3.2",
+    "vue-router": "^2.5.3",
+    "vue-server-renderer": "^2.3.2",
+    "webpack": "^2.4.1"
+  }
+}
