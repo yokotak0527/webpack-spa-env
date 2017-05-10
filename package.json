@@ -25,6 +25,7 @@
     "html-loader": "^0.4.5",
     "image-size": "^0.5.2",
     "node-sass": "^4.5.2",
+    "node-sass-asset-functions": "^0.1.0",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.17.0",
     "url-loader": "^0.5.8",

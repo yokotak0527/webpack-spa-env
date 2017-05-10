@@ -1,5 +1,6 @@
-const path            = require('path');
-const sassImageHelper = require(path.join(process.env.APP_SRC_PATH, 'build-assets/sass/image-helper.js'));
+const path           = require('path');
+const sass           = require('node-sass');
+const assetFunctions = require('node-sass-asset-functions');
 
 module.exports = {
   test : /\.sass$/,
@@ -10,17 +11,11 @@ module.exports = {
       loader  : 'sass-loader',
       options : {
         sourceMap : true,
-        functions : sassImageHelper({
-          rtvPath : {
-            css   : process.env.APP_SERVER_PATH,
-            sass  : path.join(process.env.APP_SRC_PATH, process.env.APP_STYLE_DIR_NAME),
-            image : path.join(process.env.APP_SRC_PATH, process.env.APP_IMAGE_DIR_NAME)
-          },
-          absPath : {
-            css   : process.env.APP_SERVER_PATH,
-            sass  : path.join(process.env.APP_SRC_PATH, process.env.APP_STYLE_DIR_NAME),
-            image : path.join(process.env.APP_SRC_PATH, process.env.APP_IMAGE_DIR_NAME)
-          }
+        functions : assetFunctions({
+          images_path : path.join(process.env.APP_SRC_PATH, process.env.APP_IMAGE_DIR_NAME),
+          fonts_path  : path.join(process.env.APP_SRC_PATH, process.env.APP_FONT_DIR_NAME),
+          // http_images_path : `/${process.env.APP_IMAGE_DIR_NAME}`,
+          // http_fonts_path  : `/${process.env.APP_FONT_DIR_NAME}`
         })
       }
     }
