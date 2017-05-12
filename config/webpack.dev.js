@@ -25,16 +25,24 @@ let _export = {
     modules : [APP_SRC_PATH, 'node_modules'],
     alias : {
       'vue$'        : 'vue/dist/vue.common.js',
-      'vue-router$' : 'vue-router/dist/vue-router.common.js'
+      'vue-router$' : 'vue-router/dist/vue-router.common.js',
+      'styles'      : path.join(APP_SRC_PATH, APP_STYLE_DIR_NAME)
     }
   },
+  // resolveLoader : {
+  //   alias : {
+  //     'sass-loder' : 'hoge-hoge'
+  //   },
+  // },
   watch : true
 }
 
 // =============================================================================
 // Add rules.
-_export.module.rules.push(require('./rules/style.js')); // Sass
-_export.module.rules.push(require('./rules/image.js')); // Image
+_export.module.rules.push(require('./rules/style.js'));     // Sass
+_export.module.rules.push(require('./rules/image-url.js')); // Image
+_export.module.rules.push(require('./rules/babel.js'));     // Babel
+_export.module.rules.push(require('./rules/vue.js'));       // vue
 
 module.exports = _export;
 
