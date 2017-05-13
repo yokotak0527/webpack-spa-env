@@ -5,7 +5,7 @@
 </template>
 
 <style lang="sass">
-@import "variables"
+// @import "variables"
 // @debug image-url('./hoge.gif')
 // @debug image-url('hoge.gif', true)
 </style>
