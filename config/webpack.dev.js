@@ -4,14 +4,11 @@ const webpack = require('webpack');
 const APP_ROOT           = process.env.APP_ROOT           = process.cwd();
 const APP_SRC_PATH       = process.env.APP_SRC_PATH       = path.join(APP_ROOT, 'src');
 const APP_SERVER_PATH    = process.env.APP_SERVER_PATH    = path.join(APP_ROOT, 'dev');
+const APP_CONFIG_PATH    = process.env.APP_CONFIG_PATH    = path.join(APP_ROOT, 'config');
 const APP_IMAGE_DIR_NAME = process.env.APP_IMAGE_DIR_NAME = 'images';
 const APP_FONT_DIR_NAME  = process.env.APP_FONT_DIR_NAME  = 'font';
 const APP_STYLE_DIR_NAME = process.env.APP_STYLE_DIR_NAME = 'styles';
 
-$a = function(){ console.log("hello") };
-
-// $a = JSON.stringify(function(){ console.log("hello"); });
-// console.log($a.toString());
 
 let _export = {
   context : APP_SRC_PATH,

@@ -1,5 +1,24 @@
-const sassRule = require('./sass');
+const path = require('path');
 
-sassRule.use.unshift({loader : 'style-loader'});
-
-module.exports = sassRule;
+module.exports = {
+  test : /\.css$/,
+  use  : [
+    {
+      loader : 'style-loader'
+    },
+    {
+      loader  : 'css-loader',
+      options : {
+        modules       : true,
+        importLoaders : 1
+      }
+    },{
+      loader : 'postcss-loader',
+      options : {
+        config : { // config/
+          path : path.join(process.env.APP_CONFIG_PATH, 'postcss.config.js')
+        }
+      }
+    }
+  ]
+};
