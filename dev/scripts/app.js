@@ -12509,7 +12509,7 @@ Vue$3.compile = compileToFunctions;
 
 module.exports = Vue$3;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(10)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(11)))
 
 /***/ }),
 /* 5 */
@@ -12521,13 +12521,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_router__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_header_vue__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_header_vue__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_header_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_header_vue__);
 
 
 
 // import style from 'styles/style.css';
-// import compHeader form ''
 
 
 
@@ -12546,7 +12545,8 @@ let app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 /* 7 */,
 /* 8 */,
 /* 9 */,
-/* 10 */
+/* 10 */,
+/* 11 */
 /***/ (function(module, exports) {
 
 var g;
@@ -12573,19 +12573,19 @@ module.exports = g;
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(15)
+  __webpack_require__(16)
 }
-var Component = __webpack_require__(12)(
+var Component = __webpack_require__(14)(
   /* script */
   null,
   /* template */
-  __webpack_require__(13),
+  __webpack_require__(15),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -12617,7 +12617,21 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 12 */
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n.test[data-v-29e8c3c6]{\n  background : url(" + __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./images/hoge.gif\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())) + ")\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 14 */
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -12714,7 +12728,7 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -12733,37 +12747,23 @@ if (false) {
 }
 
 /***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "\n.test[data-v-29e8c3c6]{\n  background : width('images/hoge.gif')\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(14);
+var content = __webpack_require__(13);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(16)("bd6d82de", content, false);
+var update = __webpack_require__(17)("43afa89c", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-29e8c3c6\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./header.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-29e8c3c6\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./header.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-29e8c3c6\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./header.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-29e8c3c6\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./header.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -12773,7 +12773,7 @@ if(false) {
 }
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -12792,7 +12792,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(17)
+var listToStyles = __webpack_require__(18)
 
 /*
 type StyleObject = {
@@ -12994,7 +12994,7 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
 /**

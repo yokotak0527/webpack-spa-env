@@ -8,7 +8,6 @@ const APP_FONT_DIR_NAME   = process.env.APP_FONT_DIR_NAME   = 'fonts';
 const APP_STYLE_DIR_NAME  = process.env.APP_STYLE_DIR_NAME  = 'styles';
 const APP_SRC_PATH        = process.env.APP_SRC_PATH        = path.join(APP_ROOT, APP_SORUCE_DIR_NAME);
 const APP_SERVER_PATH     = process.env.APP_SERVER_PATH     = path.join(APP_ROOT, 'dev');
-const APP_CONFIG_PATH     = process.env.APP_CONFIG_PATH     = path.join(APP_ROOT, 'config');
 
 
 let _export = {
@@ -33,16 +32,18 @@ let _export = {
       'styles'      : path.join(APP_SRC_PATH, APP_STYLE_DIR_NAME)
     }
   },
-  // resolveLoader : {
-  //   alias : {
-  //     'sass-loder' : 'hoge-hoge'
-  //   },
-  // },
+  resolveLoader : {
+    root : '/'
+    // alias : {
+    //   'postcss.config.js' : './conf/postcss.config.js'
+    //   // 'sass-loder' : 'hoge-hoge'
+    // },
+  },
   watch : true
 }
 
 // =============================================================================
-_export.module.rules.push(require('./rules/style.js'));     // Image
+_export.module.rules.push(require('./rules/style.js'));     // Style
 _export.module.rules.push(require('./rules/image-url.js')); // Image
 _export.module.rules.push(require('./rules/babel.js'));     // Babel
 _export.module.rules.push(require('./rules/vue.js'));       // vue

@@ -6,6 +6,6 @@
 
 <style scoped>
 .test{
-  background : width('images/hoge.gif')
+  background : url('images/hoge.gif')
 }
 </style>

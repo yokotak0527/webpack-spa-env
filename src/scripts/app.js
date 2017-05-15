@@ -2,9 +2,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 // import style from 'styles/style.css';
-// import compHeader form ''
 
-import compHeader from '../components/header.vue'
+import compHeader from 'components/header.vue'
 
 let app = new Vue({
   el   : '#app',
