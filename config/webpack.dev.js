@@ -29,23 +29,22 @@ let _export = {
     alias : {
       'vue$'        : 'vue/dist/vue.common.js',
       'vue-router$' : 'vue-router/dist/vue-router.common.js',
-      'styles'      : path.join(APP_SRC_PATH, APP_STYLE_DIR_NAME)
+      // 'styles'      : path.join(APP_SRC_PATH, APP_STYLE_DIR_NAME)
     }
   },
-  resolveLoader : {
-    root : '/'
-    // alias : {
-    //   'postcss.config.js' : './conf/postcss.config.js'
-    //   // 'sass-loder' : 'hoge-hoge'
-    // },
-  },
+  // resolveLoader : {
+  //   // alias : {
+  //   //   'postcss.config.js' : './conf/postcss.config.js'
+  //   //   // 'sass-loder' : 'hoge-hoge'
+  //   // },
+  // },
   watch : true
 }
 
 // =============================================================================
 _export.module.rules.push(require('./rules/style.js'));     // Style
 _export.module.rules.push(require('./rules/image-url.js')); // Image
-_export.module.rules.push(require('./rules/babel.js'));     // Babel
+// _export.module.rules.push(require('./rules/babel.js'));     // Babel
 _export.module.rules.push(require('./rules/vue.js'));       // vue
 
 module.exports = _export;
