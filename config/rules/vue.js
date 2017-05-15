@@ -14,8 +14,13 @@ module.exports = {
   exclude : /(node_modules|bower_components)/,
   test    : /\.vue$/,
   options : {
-    loaders : {
-      // postcss :
+    postcss : {
+      config : { // config/
+        path : path.join(process.env.APP_CONFIG_PATH, 'postcss.config.js')
+      }
     }
+    // loaders : {
+    //   // postcss :
+    // }
   }
 }
