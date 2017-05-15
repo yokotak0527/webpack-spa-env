@@ -1,6 +1,6 @@
 const path       = require('path');
 const modRewrite = require('connect-modrewrite');
-let svrRoot = path.join(process.cwd(), 'dev');
+let svrRoot      = path.join(process.cwd(), 'dev');
 
 module.exports = {
   ui : {

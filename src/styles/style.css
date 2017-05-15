@@ -1,5 +1,1 @@
-/*@import "styles/child/child.css"*/
-
-body{
-  background : url('/hoge.gif')
-}
+@import "styles/child/child.css"

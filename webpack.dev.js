@@ -1,13 +1,13 @@
 const path    = require('path');
 const webpack = require('webpack');
 
-const APP_ROOT           = process.env.APP_ROOT           = process.cwd();
-const APP_SRC_PATH       = process.env.APP_SRC_PATH       = path.join(APP_ROOT, 'src');
-const APP_SERVER_PATH    = process.env.APP_SERVER_PATH    = path.join(APP_ROOT, 'dev');
-const APP_CONFIG_PATH    = process.env.APP_CONFIG_PATH    = path.join(APP_ROOT, 'config');
-const APP_IMAGE_DIR_NAME = process.env.APP_IMAGE_DIR_NAME = 'images';
-const APP_FONT_DIR_NAME  = process.env.APP_FONT_DIR_NAME  = 'font';
-const APP_STYLE_DIR_NAME = process.env.APP_STYLE_DIR_NAME = 'styles';
+const APP_ROOT            = process.env.APP_ROOT            = process.cwd();
+const APP_SORUCE_DIR_NAME = process.env.APP_SORUCE_DIR_NAME = 'src';
+const APP_IMAGE_DIR_NAME  = process.env.APP_IMAGE_DIR_NAME  = 'images';
+const APP_FONT_DIR_NAME   = process.env.APP_FONT_DIR_NAME   = 'fonts';
+const APP_STYLE_DIR_NAME  = process.env.APP_STYLE_DIR_NAME  = 'styles';
+const APP_SRC_PATH        = process.env.APP_SRC_PATH        = path.join(APP_ROOT, APP_SORUCE_DIR_NAME);
+const APP_SERVER_PATH     = process.env.APP_SERVER_PATH     = path.join(APP_ROOT, 'dev');
 
 
 let _export = {
@@ -23,6 +23,7 @@ let _export = {
   module : {
     rules : []
   },
+  plugins : [],
   resolve : {
     modules : [APP_SRC_PATH, 'node_modules'],
     alias : {
@@ -31,17 +32,18 @@ let _export = {
       'styles'      : path.join(APP_SRC_PATH, APP_STYLE_DIR_NAME)
     }
   },
-  // resolveLoader : {
-  //   alias : {
-  //     'sass-loder' : 'hoge-hoge'
-  //   },
-  // },
+  resolveLoader : {
+    root : '/'
+    // alias : {
+    //   'postcss.config.js' : './conf/postcss.config.js'
+    //   // 'sass-loder' : 'hoge-hoge'
+    // },
+  },
   watch : true
 }
 
 // =============================================================================
-// Add rules.
-_export.module.rules.push(require('./rules/style.js'));     // Sass
+_export.module.rules.push(require('./rules/style.js'));     // Style
 _export.module.rules.push(require('./rules/image-url.js')); // Image
 _export.module.rules.push(require('./rules/babel.js'));     // Babel
 _export.module.rules.push(require('./rules/vue.js'));       // vue

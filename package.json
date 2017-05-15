@@ -4,10 +4,10 @@
   "description": "",
   "main": "dev/index.js",
   "scripts": {
-    "server": "browser-sync start --config config/browser-sync.js",
-    "watch": "cross-env NODE_ENV=development webpack --config config/webpack.dev.js",
+    "server": "browser-sync start --config browser-sync.js",
+    "watch": "cross-env NODE_ENV=development webpack --config webpack.dev.js",
     "dev": "npm run watch & npm run server",
-    "ship": "webpack --config config/webpack.ship.js"
+    "ship": "webpack --config webpack.ship.js"
   },
   "author": "",
   "license": "ISC",
