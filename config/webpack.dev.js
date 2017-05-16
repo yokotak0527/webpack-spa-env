@@ -44,16 +44,18 @@ let _export = {
   stats : "verbose"
 }
 
-// addAlias
+// =============================================================================
+// ADD ALIAS
 let list = fs.readdirSync(APP_SRC_PATH).filter((name)=> fs.statSync(path.join(APP_SRC_PATH, name)).isDirectory() );
 list.map((elem)=>{
   _export.resolve.alias[elem] = path.join(APP_SRC_PATH, elem);
 });
 
 // =============================================================================
-_export.module.rules.push(require('./rules/style.js'));     // Style
-_export.module.rules.push(require('./rules/image-url.js')); // Image
-// _export.module.rules.push(require('./rules/babel.js'));     // Babel
-_export.module.rules.push(require('./rules/vue.js'));       // vue
+// ADD MODDULES
+_export.module.rules.push(require('./rules/style.js'));
+_export.module.rules.push(require('./rules/image-url.js'));
+_export.module.rules.push(require('./rules/babel.js'));
+_export.module.rules.push(require('./rules/vue.js'));
 
 module.exports = _export;
