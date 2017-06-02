@@ -38,6 +38,15 @@ let _export = {
       require('./rules/vue.js')
     ]
   },
+  plugins : [
+    new webpack.LoaderOptionsPlugin({
+      debug : true
+    }),
+    new WebpackNotifierPlugin({
+      title           : 'Webpack',
+      excludeWarnings : false
+    })
+  ],
   resolve : {
     modules : [
       `${env.APP_SORUCE_DIR_NAME}`,
@@ -45,9 +54,6 @@ let _export = {
     ],
     alias : alias
   },
-  plugins : [
-    new WebpackNotifierPlugin()
-  ],
   watch : true,
   // stats : 'verbose'
 }

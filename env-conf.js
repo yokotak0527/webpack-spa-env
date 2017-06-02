@@ -15,7 +15,7 @@ env.APP_SOURCE_DIR_NAMES = JSON.stringify({
   'font'      : 'font',
   'iconFont'  : 'font/icon',
   'js'        : 'js',
-  'vue'       : 'vue'
+  'cmpt'      : 'cmpt'
 });
 // =============================================================================
 // ENTRIES

@@ -1,6 +1,8 @@
-console.log("dds3");
-// import includes from 'js/sample.js';
-//
-// let arr = [1,2,3,4,5,6];
-//
-// console.log(includes(arr, 2));
+import Vue from 'vue';
+
+let app = new Vue({
+  el         : '#app',
+  components : {
+    'my-cmpt' : require('cmpt/test.vue')
+  }
+})
