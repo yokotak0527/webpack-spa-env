@@ -5,8 +5,8 @@ module.exports = {
   loader  : 'vue-loader',
   exclude : /(node_modules|bower_components)/,
   options : {
-    html : {
-      
-    }
+    // postLoaders : {
+    //   html : 'vue-html-loader'
+    // }
   }
 }

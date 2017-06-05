@@ -4,8 +4,6 @@ const webpack               = require('webpack');
 const fs                    = require('fs');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
-const gulp = require('gulp');
-
 let env = process.env;
 
 // =============================================================================
@@ -35,7 +33,9 @@ let _export = {
   module : {
     rules : [
       require('./rules/babel.js'),
-      require('./rules/vue.js')
+      require('./rules/vue.js'),
+      require('./rules/sass.js'),
+      require('./rules/url.js')
     ]
   },
   plugins : [
@@ -55,7 +55,7 @@ let _export = {
     alias : alias
   },
   watch : true,
-  // stats : 'verbose'
+  stats : 'verbose'
 }
 
 module.exports = _export;
