@@ -2,6 +2,7 @@ const path = require('path');
 let   env  = process.env;
 
 env.APP_ROOT                = process.cwd();
+env.APP_SERVER_ROOT         = env.APP_ROOT;
 env.APP_PUBLIC_PATH         = '/'; // /admin/sys/wp-content/themes/[theme dir.]/
 env.APP_SOURCE_DIR_NAME     = 'src';
 env.APP_BUILD_DIR_NAME      = 'build';

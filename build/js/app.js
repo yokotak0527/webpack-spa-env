@@ -9999,12 +9999,6 @@ var _style2 = _interopRequireDefault(_style);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// export default {
-//   APP_PUBLIC_PATH      : env.APP_PUBLIC_PATH,
-//   APP_SOURCE_DIR_NAMES : env.APP_SOURCE_DIR_NAMES,
-//   APP_BUILD_DIR_NAME   : env.APP_BUILD_DIR_NAME
-// }
-
 var app = new _vue2.default({
   el: '#app',
   components: {
@@ -10026,7 +10020,7 @@ exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-ba
 
 
 // module
-exports.push([module.i, "h1{font-size:24px;color:#FFF;background:url(" + __webpack_require__(/*! img/child/fireworks.jpg */ 1) + ")}\n", ""]);
+exports.push([module.i, "h1{font-size:40px;color:#FFF;background:url(" + __webpack_require__(/*! img/child/fireworks.jpg */ 1) + ")}\n", ""]);
 
 // exports
 

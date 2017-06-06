@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
-  "main": "dev/index.js",
   "scripts": {
-    "server": "browser-sync start --config config/browser-sync.js",
-    "watch": "cross-env NODE_ENV=develop webpack --config ./webpack.dev.js"
+    "server": "browser-sync start --config browser-sync.js",
+    "webpack": "cross-env NODE_ENV=develop webpack --config ./webpack.dev.js",
+    "watch": "npm run webpack & npm run server"
   },
   "author": "yokotak0527",
   "license": "ISC",
